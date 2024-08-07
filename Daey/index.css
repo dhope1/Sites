@@ -12,17 +12,43 @@ body {
 }
 
 /* Header and Navigation */
-.header .navbar-brand {
+header .navbar-brand {
     font-size: 2em;
     font-weight: bold;
     letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
 }
 
 /* Main Content */
 .hero {
     height: 100vh;
-    background: url('slideshow/Xmass22.jpg') no-repeat center center/cover;
-    animation: slideshow 20s infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.background-slide.active {
+    opacity: 1;
 }
 
 .hero-content {
@@ -52,15 +78,11 @@ body {
 }
 
 /* Footer */
-footer .social-media a:hover {
-    background-color: #ff7f50;
-    color: white;
+footer .social-media a {
+    font-size: 1.5em;
+    margin: 0 10px;
 }
 
-/* Slideshow Background */
-@keyframes slideshow {
-    0% { background-image: url('slideshow/14th.jpg'); }
-    33% { background-image: url('slideshow/Cute1.jpg'); }
-    66% { background-image: url('slideshow/PurpleRain1.jpg'); }
-    100% { background-image: url('slideshow/WP.jpg'); }
+footer .social-media a:hover {
+    color: #ff7f50;
 }

@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing Store</title>
+    <title>Daey Fashions</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header class="bg-dark text-white py-3">
         <nav class="navbar navbar-expand-lg navbar-dark container">
-            <a class="navbar-brand" href="#">Daey Fashions</a>
+            <a class="navbar-brand" href="#" style="font-family: 'Playfair Display', serif;">Daey Fashions</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,9 +28,16 @@
     </header>
     <main>
         <section class="hero position-relative d-flex justify-content-center align-items-center text-white">
-            <div class="hero-content text-center">
+            <div class="background-slider">
+                <div class="background-slide active" style="background-image: url('slideshow/WP.jpg');"></div>
+                <div class="background-slide" style="background-image: url('slideshow/Cute1.jpg');"></div>
+                <div class="background-slide" style="background-image: url('slideshow/Nicee....jpg');"></div>
+                <div class="background-slide" style="background-image: url('slideshow/Xmass22.jpg');"></div>
+                <div class="background-slide" style="background-image: url('slideshow/PurpleRain1.jpg');"></div>
+            </div>
+            <div class="hero-content text-center position-absolute">
                 <h1>Discover Your Style</h1>
-                <p>Explore our latest collection of fashion-forward clothing.</p>
+                <h4><p>Explore our latest collection of fashion-forward clothing.</p></h6>
                 <a href="products.html" class="btn btn-primary">Checkout Now</a>
             </div>
         </section>
@@ -61,15 +70,16 @@
         <div class="container">
             <p>&copy; 2024 Daey Fashions. All rights reserved.</p>
             <ul class="list-inline social-media">
-                <li class="list-inline-item"><a href="https://www.instagram.com/daeyfashions" class="text-white" aria-label="Instagram">Instagram</a></li>
-                <li class="list-inline-item"><a href="https://wa.me/+256709180564" class="text-white" aria-label="WhatsApp">WhatsApp</a></li>
-                <!--<li class="list-inline-item"><a href="mailto:your-email@example.com" class="text-white" aria-label="Email">Email</a></li>-->
+                <li class="list-inline-item"><a href="https://www.instagram.com/daeyFashions" class="text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="https://wa.me/+256709180564" class="text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+                <!--<li class="list-inline-item"><a href="mailto:your-email@example.com" class="text-white" aria-label="Email"><i class="fas fa-envelope"></i></a></li>-->
             </ul>
-            <p class="contact-info">Phone: +256709180564</p>
+            <p class="contact-info">Call: +256709180564</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
