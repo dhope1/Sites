@@ -4,57 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing Store</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <div class="logo">Daey Fashions</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="account.html">Account</a></li>
+    <header class="bg-dark text-white py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand" href="#">Daey Fashions</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <div class="hero-content">
+        <section class="hero position-relative d-flex justify-content-center align-items-center text-white">
+            <div class="hero-content text-center">
                 <h1>Discover Your Style</h1>
                 <p>Explore our latest collection of fashion-forward clothing.</p>
-                <a href="products.html" class="btn-primary">Checkout Now</a>
+                <a href="products.html" class="btn btn-primary">Checkout Now</a>
             </div>
         </section>
-        <section class="features">
+        <section class="features py-5 bg-light">
             <div class="container">
-                <div class="feature">
-                    <h2>Exclusive Designs</h2>
-                    <p>Showcasing unique and limited edition clothing items.</p>
-                </div>
-                <div class="feature">
-                    <h2>High-Quality Materials</h2>
-                    <p>Each piece is made from premium fabrics for ultimate comfort.</p>
-                </div>
-                <div class="feature">
-                    <h2>Trusted Brand</h2>
-                    <p>Established reputation for quality and style.</p>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="feature p-4 bg-white text-center rounded shadow">
+                            <h2>Exclusive Designs</h2>
+                            <p>Showcasing unique and limited edition clothing items.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature p-4 bg-white text-center rounded shadow">
+                            <h2>High-Quality Materials</h2>
+                            <p>Each piece is made from premium fabrics for ultimate comfort.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature p-4 bg-white text-center rounded shadow">
+                            <h2>Trusted Brand</h2>
+                            <p>Established reputation for quality and style.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="bg-dark text-white text-center py-4">
         <div class="container">
-            <p>&copy; 2024 Clothing Store. All rights reserved.</p>
-            <ul class="social-media">
-                <li><a href="https://www.instagram.com/yourprofile" aria-label="Instagram">Instagram</a></li>
-                <li><a href="https://wa.me/yourphonenumber" aria-label="WhatsApp">WhatsApp</a></li>
-                <li><a href="mailto:your-email@example.com" aria-label="Email">Email</a></li>
+            <p>&copy; 2024 Daey Fashions. All rights reserved.</p>
+            <ul class="list-inline social-media">
+                <li class="list-inline-item"><a href="https://www.instagram.com/daeyfashions" class="text-white" aria-label="Instagram">Instagram</a></li>
+                <li class="list-inline-item"><a href="https://wa.me/+256709180564" class="text-white" aria-label="WhatsApp">WhatsApp</a></li>
+                <!--<li class="list-inline-item"><a href="mailto:your-email@example.com" class="text-white" aria-label="Email">Email</a></li>-->
             </ul>
-            <p class="contact-info">Phone: +123 456 7890</p>
+            <p class="contact-info">Phone: +256709180564</p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
