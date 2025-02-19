@@ -1,0 +1,115 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Gallery */
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonials */
+.testimonial {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog */
+.blog-post {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+/* JavaScript Functions */
+
+/* Smooth scrolling for navigation links */
+document.querySelectorAll('.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 50,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+/* Lightbox effect for gallery images */
+document.querySelectorAll('.gallery img').forEach(img => {
+    img.addEventListener('click', function () {
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.style.position = 'fixed';
+        lightbox.style.top = '0';
+        lightbox.style.left = '0';
+        lightbox.style.width = '100%';
+        lightbox.style.height = '100%';
+        lightbox.style.backgroundColor = 'rgba(0,0,0,0.8)';
+        lightbox.style.display = 'flex';
+        lightbox.style.alignItems = 'center';
+        lightbox.style.justifyContent = 'center';
+        document.body.appendChild(lightbox);
+
+        const imgElement = document.createElement('img');
+        imgElement.src = this.src;
+        imgElement.style.maxWidth = '90%';
+        imgElement.style.maxHeight = '90%';
+        lightbox.appendChild(imgElement);
+
+        lightbox.addEventListener('click', () => {
+            document.body.removeChild(lightbox);
+        });
+    });
+});
